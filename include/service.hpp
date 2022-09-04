@@ -36,6 +36,7 @@ namespace at
 
 		virtual void add(const std::string& message) = 0;
 		virtual void send(const std::string& message) = 0;
+		virtual std::string get_name() = 0;
 
 	protected:
 		virtual bool job_available() = 0;

@@ -1,6 +1,7 @@
 #include "file_service.hpp"
 
 #include <iostream>
+#include <string>
 
 namespace at
 {
@@ -22,7 +23,7 @@ namespace at
 		return "";
 	}
 
-	file_service::file_service(const std::string& destination)
+	file_service::file_service(const std::string& destination) : m_dest_name(destination)
 	{
 		m_destination.open(destination, std::fstream::out);
 	}
@@ -49,5 +50,10 @@ namespace at
 			std::cout << message << std::endl;
 			m_destination << message << std::endl;
 		}
+	}
+
+	std::string file_service::get_name()
+	{
+		return m_dest_name;
 	}
 }
