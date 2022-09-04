@@ -7,6 +7,8 @@
 
 namespace at
 {
+	// TODO: Implement callback routine where if error occurs, user is warned.
+
 	// Intended to be static singleton
 	template <typename TService>
 	class trace_manager

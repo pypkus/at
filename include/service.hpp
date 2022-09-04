@@ -16,11 +16,11 @@ namespace at
 	// Network over TCP or UDP or other protocols.
 	// 
 	// Some services may work entirely asynchronously depending on user needs,
-	// but will yield unordered data. For system logs it probably wise to have
-	// logs in order. Most services are required to maintain output order as 
-	// they are called in user code.
+	// but will yield unordered data. For system logs it would be probably wise 
+	// to have logs in order. Most services are required to maintain output order 
+	// as they are called in user code.
 	// 
-	// For example if we call send_message function with data "A", "B", "C", "D",
+	// For example if we call add(...) function with data "A", "B", "C", "D",
 	// then the output to a destination must be "ABCD", that would be ordered.
 	// Unordered would look like "CABD".
 	// 
